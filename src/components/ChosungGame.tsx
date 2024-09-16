@@ -62,7 +62,7 @@ const ChosungGame: React.FC = () => {
     return (
         <Layout className="h-[100dvh] overflow-hidden bg-gradient-to-br from-background to-secondary">
             <Content className="p-6">
-                <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-game p-8">
+                <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-game p-6">
                     <Title level={2} className="text-center mb-6 text-primary">초성 꼬맨틀</Title>
                     <DailyChosung chosung={dailyChosung} activatedChosungs={activatedChosungs} />
                     <GuessInput
