@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app';
 import { ConfigProvider } from 'antd';
-import '../app/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
