@@ -1,7 +1,7 @@
 "use client"
 
-import { CopyOutlined, SoundOutlined, SwapOutlined, TranslationOutlined } from '@ant-design/icons';
-import { Button, Input, Layout, Select, Spin, Typography, message } from 'antd';
+import { ArrowRightOutlined, CopyOutlined, SoundOutlined, SwapOutlined, TranslationOutlined } from '@ant-design/icons';
+import { Button, Input, Layout, Select, Spin, Tooltip, Typography, message } from 'antd';
 import { motion } from 'framer-motion';
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -106,6 +106,13 @@ const TranslateButton = styled(Button)`
   }
 `;
 
+const BlueArrowButton = styled(Button)`
+  color: #1890ff;
+  &:hover, &:focus {
+    color: #40a9ff;
+  }
+`;
+
 const AITranslationPage: React.FC = () => {
     const [input, setInput] = useState('');
     const [result, setResult] = useState<string | null>(null);
@@ -177,7 +184,11 @@ const AITranslationPage: React.FC = () => {
                             <Option value="ko">한국어</Option>
                             {/* <Option value="en">영어</Option> */}
                         </Select>
-                        <Button icon={<SwapOutlined />} />
+                        {/* <Button icon={<SwapOutlined />} disabled /> */}
+                        <Tooltip title="양방향 추후 그것은 수동의 노력">
+                            {/* <BlueArrowButton icon={<ArrowRightOutlined />} /> */}
+                            <ArrowRightOutlined />
+                        </Tooltip>
                         <Select defaultValue="en" style={{ width: 120, marginLeft: '8px' }}>
                             <Option value="en">번역체</Option>
                             {/* <Option value="ko">한국어</Option> */}
@@ -210,7 +221,7 @@ const AITranslationPage: React.FC = () => {
                     </TranslationArea>
                     <ActionBar>
                         <div>
-                            <IconButton icon={<SoundOutlined />} />
+                            {/* <IconButton icon={<SoundOutlined />} /> */}
                             <IconButton
                                 icon={<CopyOutlined />}
                                 onClick={copyToClipboard}
