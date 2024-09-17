@@ -5,9 +5,14 @@ import 'antd/dist/reset.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
+// export const metadata: Metadata = {
+//   title: '초성 맞추기 게임',
+//   description: '매일 새로운 초성으로 단어를 맞춰보세요!',
+// }
+
 export const metadata: Metadata = {
-  title: '초성 맞추기 게임',
-  description: '매일 새로운 초성으로 단어를 맞춰보세요!',
+  title: 'AI 번역기',
+  description: '나는 통역 전문가 이다',
 }
 
 export default function RootLayout({

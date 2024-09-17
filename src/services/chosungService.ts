@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://dev.naco.kr/api';
+const API_BASE_URL = 'https://dev.naco.kr/api/word';
 
 export interface DailyWordResponse {
     word: string;
